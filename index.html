@@ -5,6 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Villa Manis — Private Acquisition | Pererenan, Bali</title>
 <meta name="robots" content="noindex, nofollow">
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1357406473110428');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" src="https://www.facebook.com/tr?id=1357406473110428&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
@@ -1264,6 +1281,13 @@ document.addEventListener('keydown', e => {
 window.addEventListener('scroll', () => {
   document.querySelector('nav').style.padding =
     window.scrollY > 60 ? '0.7rem 3.5rem' : '1.1rem 3.5rem';
+});
+
+// Meta Pixel — fire Lead event on HubSpot form submission
+window.addEventListener('message', function(e) {
+  if (e.data.type === 'hsFormCallback' && e.data.eventName === 'onFormSubmitted') {
+    fbq('track', 'Lead');
+  }
 });
 </script>
 </body>
